@@ -1,0 +1,22 @@
+function siempreTrue() {
+    console.log(true)
+}
+siempreTrue()
+
+function* genera() {
+    let id = 0;
+    while (true) {
+        id++
+        if (id === 10){
+            return id
+        }
+        yield id // esperando hasta que se vuelva a llamar 
+    }
+}
+const gen = genera();
+
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
